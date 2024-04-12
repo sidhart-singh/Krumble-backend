@@ -1,6 +1,11 @@
 /* eslint-disable complexity */
 const router = require("express").Router();
-const { CrumInstance, Crum, User, CommentInstance } = require("../db/models");
+const {
+  CrumInstance,
+  Crum,
+  User,
+  CommentInstance,
+} = require("../../db/models");
 const { userOnly } = require("./utils");
 module.exports = router;
 
