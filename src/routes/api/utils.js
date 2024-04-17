@@ -1,9 +1,9 @@
 const userOnly = (req, res, next) => {
   if (req.user) {
-    next()
+    next();
   } else {
-    res.sendStatus(404)
+    res.sendStatus(404).json({ msg: "User must logged in." });
   }
-}
+};
 
-module.exports = {userOnly}
+module.exports = { userOnly };

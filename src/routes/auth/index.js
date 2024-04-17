@@ -51,8 +51,10 @@ router.post("/logout", (req, res) => {
       res.json({ message: "Logged out successfully" });
     });
   });
-  req.session.destroy();
-  res.json({});
+
+  // comment unchecked session destroy : session is destroyed above
+  // req.session.destroy();
+  // res.json({});
   // res.redirect('/letustryit') // DELETE /login 404 2.556 ms - 147
 });
 
