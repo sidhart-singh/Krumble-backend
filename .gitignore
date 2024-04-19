@@ -17,4 +17,4 @@ dist-ssr
 .DS_Store
 
 # firebase 
-firebase-admin-key
+firebase-admin-key.json
