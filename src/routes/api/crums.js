@@ -24,7 +24,9 @@ router.post("/", async (req, res) => {
       return res.status(500).json({ success: false, error: err.message });
 
     const filePath = files.image[0].filepath;
-    const remoteFilePath = `test/images/${files.image[0].originalFilename}`;
+    const remoteFilePath = `prod/images/${
+      new Date().valueOf() + "_" + files.image[0].originalFilename
+    }`;
 
     try {
       // Upload the file to Firebase Storage
