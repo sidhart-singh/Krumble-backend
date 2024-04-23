@@ -51,9 +51,6 @@ router.post("/logout", (req, res) => {
       res.json({ message: "Logged out successfully" });
     });
   });
-  req.session.destroy();
-  res.json({});
-  // res.redirect('/letustryit') // DELETE /login 404 2.556 ms - 147
 });
 
 router.get("/me", (req, res) => {
